@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-s="$1"
-shift
-for file in "$@"; do
-  mv "$file" "${file}${s}"
+for file in "${@:2}"; do
+	mv "$file" "${file}$1"
 done
