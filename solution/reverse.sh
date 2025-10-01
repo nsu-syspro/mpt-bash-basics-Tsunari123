@@ -1,2 +1,6 @@
 #!/usr/bin/env bash
-tac
+r=""
+while read -r line; do
+    r="$line"$'\n'"$r"
+done
+echo "$r"
